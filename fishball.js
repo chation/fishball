@@ -4,7 +4,7 @@
 var box = document.getElementById("right_col_peck");
 var textbox = document.getElementsByClassName('cs-textarea')[0];
 var submit_text = document.getElementsByClassName('b-btn')[0];
-var fish_num = document.getElementsByClassName("y1 fl")[0].getElementsByTagName("em")[0];
+var fish_num = document.getElementsByClassName("y1 fl")[0].querySelectorAll("em")[0];
 function xxxx(){
 	box.click();
 }
