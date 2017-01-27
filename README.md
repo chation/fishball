@@ -116,9 +116,9 @@ document.onkeydown=function(event){
 	}
 };
 ```
-以上的代码是不能在console里运行的，我们必须删除掉空格缩格以及回车等符号：
+我们可以删除掉空格缩格以及回车等符号在前面加上javascript:,然后将其保存为书签,这样下次使用直接点击书签,与贴到控制台是一样的效果：
 ```javascript
-function user_click(){document.getElementById("right_col_peck").click();}var i=15;var t=setInterval(function(){if (i == 0) { clearInterval(t);} document.getElementsByClassName('cs-textarea')[0].value = '6666' + i; document.getElementsByClassName('b-btn')[0].click(); i--;}, 11000);t;setInterval("user_click()",500);var ss=document.getElementsByClassName("y1 fl")[0].getElementsByTagName("em")[0].innerHTML;document.onkeydown=function(event){var keyplay=event||window.event||arguments.callee.caller.arguments[0];if(keyplay && keyplay.keyCode==86){var ss1=document.getElementsByClassName("y1 fl")[0].getElementsByTagName("em")[0].innerHTML;var numyw=ss1-ss;alert("哇哦~你在这个房间抢到了 "+numyw+" 个鱼丸呢~!");}};
+javascript:function user_click(){document.getElementById("right_col_peck").click();}var i=15;var t=setInterval(function(){if (i == 0) { clearInterval(t);} document.getElementsByClassName('cs-textarea')[0].value = '6666' + i; document.getElementsByClassName('b-btn')[0].click(); i--;}, 11000);t;setInterval("user_click()",500);var ss=document.getElementsByClassName("y1 fl")[0].getElementsByTagName("em")[0].innerHTML;document.onkeydown=function(event){var keyplay=event||window.event||arguments.callee.caller.arguments[0];if(keyplay && keyplay.keyCode==86){var ss1=document.getElementsByClassName("y1 fl")[0].getElementsByTagName("em")[0].innerHTML;var numyw=ss1-ss;alert("哇哦~你在这个房间抢到了 "+numyw+" 个鱼丸呢~!");}};
 ```
 好了，把上面的代码粘贴到浏览器的控制台里面，去抢鱼丸吧~！
 
@@ -160,9 +160,9 @@ document.onkeydown=function(event){
 	}
 };
 ```
-控制台脚本代码：
+书签脚本代码：
 ```javascript
-var box = document.getElementById("right_col_peck");var textbox = document.getElementsByClassName('cs-textarea')[0];var submit_text = document.getElementsByClassName('b-btn')[0];var fish_num = document.getElementsByClassName("y1 fl")[0].querySelectorAll("em")[0];function user_click(){box.click();}var i=15;var t=setInterval(function(){if(i==0){clearInterval(t);}textbox.value = '6666' + i;submit_text.click();i--;},11000);t;setInterval("user_click",500);var ss=fish_num.innerHTML;document.onkeydown=function(event){var keyplay=event||window.event||arguments.callee.caller.arguments[0];if(keyplay&&keyplay.keyCode==86){var ss1=fish_num.innerHTML;var numyw=ss1-ss;alert("哇哦~你在这个房间抢到了 "+numyw+" 个鱼丸呢~!");}};
+javascript:var box = document.getElementById("right_col_peck");var textbox = document.getElementsByClassName('cs-textarea')[0];var submit_text = document.getElementsByClassName('b-btn')[0];var fish_num = document.getElementsByClassName("y1 fl")[0].querySelectorAll("em")[0];function user_click(){box.click();}var i=15;var t=setInterval(function(){if(i==0){clearInterval(t);}textbox.value = '6666' + i;submit_text.click();i--;},11000);t;setInterval("user_click",500);var ss=fish_num.innerHTML;document.onkeydown=function(event){var keyplay=event||window.event||arguments.callee.caller.arguments[0];if(keyplay&&keyplay.keyCode==86){var ss1=fish_num.innerHTML;var numyw=ss1-ss;alert("哇哦~你在这个房间抢到了 "+numyw+" 个鱼丸呢~!");}};
 ```
 脚本代码已上传至GitHub~,欢迎点星~! 
 https://github.com/chation/fishball
